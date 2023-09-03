@@ -7,8 +7,6 @@
 The repository is structured as follows:
 
 - `backend/`: This directory contains the backend code of the "Eutum Ligguey" platform, including the API endpoints, database models, and business logic implemented in Python using the Flask framework.
-- `frontend/`: Here, you will find the frontend code for the "Eutum Ligguey" platform, implemented using JavaScript, React, and Redux. This directory also includes the HTML, CSS, and JavaScript files for the user interface.
-- `models/`: This directory contains the trained Generative AI models used by "Eutum Ligguey" to enhance the platform's capabilities. The models are implemented using Python-based AI/ML libraries, and they play a crucial role in solving specific problems such as visual question answering (VQA).
 
 ## Purpose
 
