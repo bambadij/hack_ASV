@@ -1,0 +1,43 @@
+{% extends "app/base2.html" %}
+{% block content %}
+{% load static %}
+<html>
+    <head>
+        <title> Candidate Application Page</title>
+        <link rel="stylesheet" href="{% static '/css/styleee.css'%}">
+    </head>
+<center>
+    <div class="container rounded bg-white mt-5 mb-5">
+        <div class="row">
+            <div class="col-md-5 border-right">
+                <div class="p-3 py-5">
+                    <form method="post" action="{% url 'updateprofile' pk=request.session.id %}" id="" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h4 class="text-right">Application Form</h4>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-md-6"><label class="labels">Firstname</label><input type="text" name="firstname" class="form-control" placeholder="" value="{{can.firstname}}" readonly></div>
+                            <div class="col-md-6"><label class="labels">Lastname</label><input type="text" name="lastname" class="form-control" value="{{can.lastname}}" placeholder="" readonly></div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-12"><label class="labels">Job Name</label><input type="text" name="jobname" class="form-control" placeholder="job name" value=""></div>
+                            <div class="col-md-12"><label class="labels">Experience</label><input type="text" name="experience" class="form-control" value="" placeholder="job category"></div>
+                            <div class="col-md-12"><label class="labels">State</label><input type="text" name="state" class="form-control" placeholder="enter your state" value="{{can.state}}"></div>
+                            <div class="col-md-12"><label class="labels">City</label><input type="text" name="city" class="form-control" placeholder="enter your city" value="{{can.city}}"></div>
+                            <div class="col-md-12"><label class="labels">Address</label><input type="text" name="address" class="form-control" placeholder="enter address" value="{{can.address}}"></div>
+                            <div class="col-md-12"><label class="labels">Gender</label><input type="text" name="gender" class="form-control" placeholder="your gender" value="{{can.gender}}"></div>
+                            <div class="col-md-12"><label class="labels">Highest Education</label><input type="text" name="highesteducation" class="form-control" placeholder="highest education" value="{{can.highest_education}}"></div>
+                        </div>
+                        <div class="mt-5 text-center"><button <input type="submit" value="save">Apply</button></div>
+                    </div>
+                </div>
+           
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</center>
+</html>
+{% endblock %}

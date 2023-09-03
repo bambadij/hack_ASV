@@ -1,0 +1,46 @@
+{% extends "app/company/base1.html" %}
+{% block content %}
+{% load static %}
+<html>
+    <head>
+        <title> Candidate Profile Page</title>
+        <link rel="stylesheet" href="{% static '/css/styleee.css'%}">
+    </head>
+
+<div class="container rounded bg-white mt-5 mb-5">
+    <div class="row">
+        <div class="col-md-3 border-right">
+            <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"><span class="font-weight-bold">Company Logo</span><span class="text-black-50">edogaru@mail.com.my</span><span> </span></div>
+        </div>
+        <div class="col-md-5 border-right">
+            <div class="p-3 py-5">
+                <form method="post" action="{% url 'updateprofilec' pk=request.session.id %}" id="" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h4 class="text-right">Profile Settings</h4>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-md-6"><label class="labels">Firstname</label><input type="text" name="firstname" class="form-control" placeholder="" value="{{comp.firstname}}" readonly></div>
+                        <div class="col-md-6"><label class="labels">Lastname</label><input type="text" name="lastname" class="form-control" value="{{comp.lastname}}" placeholder="" readonly></div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-12"><label class="labels">Email</label><input type="text" name="email" class="form-control" placeholder="" value="{{client.email}}" readonly></div>
+                        <div class="col-md-12"><label class="labels">Company Name</label><input type="text" name="companyname" class="form-control" placeholder="enter your Company name" value="{{comp.company_name}}"></div>
+                        <div class="col-md-12"><label class="labels">State</label><input type="text" name="state" class="form-control" placeholder="enter your state" value="{{comp.state}}"></div>
+                        <div class="col-md-12"><label class="labels">City</label><input type="text" name="city" class="form-control" placeholder="enter your city" value="{{comp.city}}"></div>
+                        <div class="col-md-12"><label class="labels">Contact</label><input type="text" name="contact" class="form-control" placeholder="enter your contact" value="{{comp.contact}}"></div>
+                        <div class="col-md-12"><label class="labels">Address</label><input type="text" name="address" class="form-control" placeholder="enter address" value="{{comp.address}}"></div>
+                    
+                    <div class="row mt-3">
+                        <div class="col-md-6"><label class="labels">Website</label><input type="text" name="website" class="form-control" placeholder="website" value="{{comp.website}}"></div>
+                        <div class="col-md-6"><label class="labels">About</label><input type="text" name="about" class="form-control" value="{{comp.about}}" placeholder="about company"></div>
+                    </div>
+                    <div class="mt-5 text-center"><button <input type="submit" value="save">Save Profile</button></div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</html>
+{% endblock %}

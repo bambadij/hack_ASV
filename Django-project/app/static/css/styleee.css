@@ -1,0 +1,55 @@
+body {
+    font-family: sans-serif;
+    background: linear-gradient(to right, #6495ED, #d59f9f);
+  }
+  
+  .container-form {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+  
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+   
+  }
+  
+  input,
+  select,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    border-radius: 5px;
+   
+    box-sizing: border-box;
+   
+    
+  }
+  
+  button {
+    background-color: blue;
+    padding: 12px 50px;
+    border-radius: 5px;
+    color: #f5f5f5;
+    margin-top: 5%;
+    margin-left: 40%;
+    cursor: pointer;
+  }
+  
+  input[type="file"] {
+    margin-top: 5px;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
