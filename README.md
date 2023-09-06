@@ -6,7 +6,8 @@
 
 The repository is structured as follows:
 
-- `backend/`: This directory contains the backend code of the "Eutum Ligguey" platform, including the API endpoints, database models, and business logic implemented in Python using the Flask framework.
+- `backend/`: This directory contains the backend code of the "Eutum Ligguey" platform, including the API endpoints, database models, and business logic implemented in Python using the Django framework.
+- `frontend/`: This directory contains the frontend code for the "Eutum Ligguey" platform, including templates in HTML, stylings in CSS, and page responsiveness in Java and Javascript. 
 
 ## Purpose
 
